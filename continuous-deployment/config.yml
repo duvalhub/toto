@@ -1,0 +1,7 @@
+app:
+  name: toto-app
+  type: nginx-webserver
+docker:
+  registry: docker.io
+  namespace: philippeduval
+  repository: toto
