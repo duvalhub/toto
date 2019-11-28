@@ -1,0 +1,16 @@
+version: "3.8"
+networks:
+  reverseproxy:
+    external: true
+    name: reverseproxy
+services:
+  ab:
+    image: philippeduval/toto
+    environment:
+      - VIRTUAL_HOST=toto.test.dev.philippeduval.ca
+      - LETSENCRYPT_HOST=hello-world.test.dev.philippeduval.ca
+    networks:
+      - reverseproxy
+
+
+# VPS 144.217.86.0
